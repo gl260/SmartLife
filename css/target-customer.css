@@ -1,0 +1,73 @@
+.target-customer{
+  min-height: 265px;
+  background-color: var(--bg-target-color);
+}
+
+.target-customer .title{
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  color: var(--title-color);
+  font-weight: normal;
+}
+
+.target-customer .item{
+  position: relative;
+  /* 这个flex干扰理解下面的绝对定位 */
+  /* 设置了绝对定位,元素就托标了 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 135px;
+  overflow: hidden;
+}
+
+.target-customer .item .sub-title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 24px;
+  color: var(--title-color);
+
+  transition: all .5s;
+}
+
+.target-customer .item .desc{
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  opacity: 0;
+
+  transition: all .5s;
+}
+
+@media (min-width: 768px) {
+  .target-customer .item:hover .sub-title{
+    top: 35%;
+  }
+  .target-customer .item:hover .desc{
+    top: 75%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .target-customer .item .sub-title{
+    top: 35%;
+    font-size: 16px;
+  }
+  .target-customer .item .desc{
+    top: 65%;
+    opacity: 1;
+    font-size: 14px;
+  }
+  .target-customer .item:nth-child(2n+1){
+    background-color: #fff;
+  }
+  /* .target-customer .item:nth-child(even){
+    background-color: var(--bg-target-color);
+  } */
+}

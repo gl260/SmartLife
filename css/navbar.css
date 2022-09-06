@@ -1,0 +1,56 @@
+.navbar{
+  margin: 16px 0;
+}
+.navbar .container-fluid{
+  max-width: var(--content-width);
+}
+.navbar .logo{
+  height: 26px;
+  padding-right: 25px;
+}
+
+/* .navbar . */
+.navbar .nav-item{
+  padding: 8px 25px;
+  font-size: var(--font-size);
+  cursor: pointer;
+}
+.navbar .nav-item:hover:not(.hot-line){
+  color: var(--theme-color);
+}
+.navbar .nav-item.active span{
+  color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
+}
+.navbar .hot-line{
+  cursor: inherit;
+}
+
+.navbar .show-icon{
+  height: 20px;
+  border-style: none;
+}
+.navbar .navbar-toggler{
+  border: none;
+}
+@media(max-width: 992px) {
+
+  .navbar .show-icon{
+    height: 20px;
+  }
+  .navbar .show-icon:active{
+    opacity: .6;
+  }
+
+  /* 修改下拉背景 */
+  #navbarNav{
+    position: absolute;
+    z-index: 9999;
+    top: calc(100% + 16px);
+    width: 100%;
+    background-color: var(--bg-nav-color);
+    color: #fff;
+    margin: 0 -16px;
+  }
+
+}

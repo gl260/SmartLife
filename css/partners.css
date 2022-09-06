@@ -1,0 +1,34 @@
+
+.partners .p-title{
+  margin-top: 70px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: var(--title-color);
+  text-align: center;
+  line-height: 56px;
+}
+.partners .p-sub-title{
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--sub-title-color);
+  text-align: center;
+}
+.partners .p-content{
+  overflow: hidden;
+}
+.partners .p-content .long-img{
+  display: flex;
+  height: 302px;
+
+  width: calc(5017px + 5017px);
+  animation: move 70s infinite linear;
+}
+
+@keyframes move {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
